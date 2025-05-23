@@ -5,4 +5,9 @@ public class AppDbContext : DbContext
     public DbSet<Category> Categories { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     => options.UseSqlite("Data Source=product.db");
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public AppDbContext()
+    {
+    }
 }
