@@ -4,7 +4,6 @@ using System.Runtime.Intrinsics.Arm;
 
 using (var db = new AppDbContext())
 {
-    db.Database.EnsureCreated();
     NameSearch(db, "Яблоки");
 }
 
